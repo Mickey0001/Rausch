@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,6 @@
       <?php bloginfo('name'); ?> |
       <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
     </title>
-    <?php bloginfo('name'); ?> |
     <!-- Semantic UI core CSS -->
     <link href="<?php bloginfo('template_url'); ?>/assets/core/semantic.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -38,7 +37,7 @@
               <div class="ui secondary inverted menu">
                <div class="left menu">
                 <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
-                <a href="index.php" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/logo.png"/></a>
+                <a href="index.php" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/logo.png" width="100"  class="ui image"/></a>
                 </div>
                 <div class="right menu">
                   <a href="index.php" class="active item">Home</a>

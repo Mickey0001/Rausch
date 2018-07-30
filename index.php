@@ -3,7 +3,7 @@
         <div class="hero">
            <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/hero.jpg" alt="" class="ui image">
             <div class="hero-overlay">
-              <p>Rausch <span>Design and Development</span></p>
+              <p><?php bloginfo('name'); ?><span>Design and Development</span></p>
             </div> <!-- hero overlay -->
         </div> <!-- hero -->
     	
