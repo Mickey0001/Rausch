@@ -1,7 +1,7 @@
 <?php include('includes/header.php'); ?>
 
         <div class="hero">
-           <img src="images/hero.jpg" alt="" class="ui image">
+           <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/hero.jpg" alt="" class="ui image">
             <div class="hero-overlay">
               <p>Rausch <span>Design and Development</span></p>
             </div> <!-- hero overlay -->

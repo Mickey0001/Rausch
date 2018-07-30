@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!DOCTYPE php>
+<php <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,14 @@
       <?php bloginfo('name'); ?> |
       <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
     </title>
-
     <?php bloginfo('name'); ?> |
-    <link rel="stylesheet" type="text/css" href="core/semantic.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Semantic UI core CSS -->
+    <link href="<?php bloginfo('template_url'); ?>/assets/core/semantic.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="<?php bloginfo('template_url'); ?>/assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-
-
+    <link href="<?php bloginfo('template_url'); ?>/assets/css/slick.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/assets/css/slick-theme.css" rel="stylesheet">
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
@@ -27,10 +26,10 @@
     	<header>
            <div class="ui left sidebar large menu">
               <div class="vert-menu">
-                  <a href="index.html" class="item">Home</a>
-                  <a href="about.html" class="item">About</a>
-                  <a href="work.html" class="item">My Work</a>
-                  <a href="client.html" class="item">Clients</a>
+                  <a href="index.php" class="item">Home</a>
+                  <a href="about.php" class="item">About</a>
+                  <a href="work.php" class="item">My Work</a>
+                  <a href="client.php" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
                   <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
               </div> <!-- .left Menu -->
@@ -39,16 +38,16 @@
               <div class="ui secondary inverted menu">
                <div class="left menu">
                 <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
-                <a href="index.html" class="logo"><img src="images/logo.png" width="100"  class="ui image"></a>
+                <a href="index.php" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/logo.png"/></a>
                 </div>
                 <div class="right menu">
-                  <a href="index.html" class="active item">Home</a>
-                  <a href="about.html" class="item">About</a>
-                  <a href="work.html" class="item">My Work</a>
-                  <a href="Client.html" class="item">Clients</a>
+                  <a href="index.php" class="active item">Home</a>
+                  <a href="about.php" class="item">About</a>
+                  <a href="work.php" class="item">My Work</a>
+                  <a href="Client.php" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
                   <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
                 </div>
               </div>
     		</div> <!-- site branding -->
-    	</header> <!-- header -->
+      </header> <!-- header -->

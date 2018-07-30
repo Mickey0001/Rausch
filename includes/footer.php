@@ -1,7 +1,7 @@
 <footer>
     	  <div class="ui container">
     	    <div class="footer-content">
-              <div class="copyright">&copy;<?php echo date("Y"); ?> Gamaliel Rausch All rights reserved</div>
+              <div class="copyright">&copy;<?php echo date("Y"); ?> <a href=""> Gamaliel Rausch</a>All rights reserved</div>
               <div class="right-content">
                 <div class="ui horizontal list">
                   <a class="item">Support</a>
