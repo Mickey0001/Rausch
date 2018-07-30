@@ -1,7 +1,6 @@
 
 /*
 Theme Name: Rausch
-Theme URI: https://github.com/rachelmccollin/WPMU-DEV-Theme-Development-Series-Files/
 Description: Custom WordPress theme using Semantic UI framework.
 Author: Mirza Sisic
 Author URI: https://mirzasisic.com/
@@ -9,3 +8,531 @@ Version: 1.0
 License: MIT License
 License URI: https://opensource.org/licenses/MIT
 */
+
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,700');
+
+body, body * {
+  font-family: 'Jura', sans-serif;
+  font-weight: 100;
+  font-size: 16x;
+  line-height: 1.4; 
+}
+body,
+body.pushable>.pusher  {
+  color: white;
+  background: #131217;
+  padding-top: 70px;
+}
+p,h6,h5,h4,h3,h2,h1 {
+  margin: 0;
+}
+header .ui.vertical.menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+.ui.uncover.sidebar {
+  width: 350px;
+}
+.vert-menu {
+  padding: 20px 10px;
+  width: 100%;
+}
+.ui.vertical.menu .item:before,
+.ui.menu .item:before {
+  display: none;
+}
+
+ .ui.secondary.menu .toc.item.toogle-menu {
+  display: none;
+}
+.ui.secondary.menu .toc.item.toogle-menu:hover {
+  background: none;
+}
+.toogle-menu p {
+  padding-left: 25px;
+}
+.toogle-menu span {
+  border-bottom: 1px solid #666;
+  box-sizing: border-box;
+  width: 12px;
+  height: 9px;
+}
+.toogle-menu span::before {
+  width: 18px;
+  top: 3px;
+  left: -3px;
+}
+.toogle-menu span::before, 
+.toogle-menu span::after {
+  content: ' ';
+  height: 1px;
+}
+.toogle-menu span::after {
+  width: 4px;
+  top: 11px;
+  left: 4px;
+}
+.toogle-menu span,
+.toogle-menu span::before, 
+.toogle-menu span::after {
+  border-top: 1px solid #666;
+  display: block;
+  position: absolute;
+  -webkit-transition: width 200ms ease, left 200ms ease, border-color 200ms;
+  -moz-transition: width 200ms ease, left 200ms ease, border-color 200ms;
+  -o-transition: width 200ms ease, left 200ms ease, border-color 200ms;
+  transition: width 200ms ease, left 200ms ease, border-color 200ms;
+}
+.toogle-menu:hover span, 
+.toogle-menu:hover span::after {
+    width: 18px;
+}
+.toogle-menu:hover span::before, 
+.toogle-menu:hover span::after {
+    left: 0px;
+}
+
+.ui.secondary.menu {
+  align-items: center;
+}
+header .primary-menu  {
+  padding: 15px 50px;
+  position: fixed;
+  background: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+body.sticky-header .site-title  {
+  -moz-transform: scale(.7, .7);
+  -ms-transform: scale(.7, .7);
+  -webkit-transform: scale(.7, .7);
+  transform: scale(.7, .7);
+}
+.logo {
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 5px;
+font-family: Coco-Regular;
+}
+.logo:hover {
+  color: white;
+}
+.ui.secondary.inverted.menu a.item {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: .9rem;
+  transition: all 1s ease;
+  color: #929292 !important;
+}
+.ui.secondary.inverted.menu .item:last-child {
+  text-transform: lowercase !important;
+}
+.ui.secondary.inverted.menu .active.item,
+.ui.secondary.inverted.menu .active.item:hover,
+.ui.secondary.inverted.menu .item:hover {
+  background: none !important;
+}
+.hero {
+  position: relative;
+  color: white;
+  max-height: 52vw;
+  overflow: hidden;
+}
+.hero-overlay {
+  padding: .6rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transition: background-color 400ms;
+  display: flex;
+  align-items: flex-end;
+}
+.hero-overlay p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  padding: 50px;
+}
+.hero-overlay p span {
+  font-size: .9rem;
+  color: gray;
+  padding-left: 10px;
+  text-transform: none;
+}
+.hero:hover .arrows {
+  display: block;
+}
+.arrows p {
+  position: absolute;
+  top: 50%;
+  background: #3e3e3ead;
+  border-radius: 50%;
+  padding: 10px;
+}
+.arrows p:hover {
+  background: #969595ad;
+}
+.arrows .right-angel {
+  right: 0;
+  margin-right: -50px;
+}
+.arrows .left-angel {
+  left: 0;
+  margin-left: -50px;
+}
+.arrows .icon {
+  color: #ababab;
+  margin: 0;
+}
+.bullet {
+  text-align: center;
+  padding-top: 20px;
+  display: none;
+  list-style: none;
+}
+.bullet .dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 .3rem;
+  transition: all .6s ease;
+  cursor: pointer;
+}
+.bullet .slick-active .dot {
+  background: white;
+  width: 15px;
+  border-radius: 10px;
+}
+.top-container {
+  padding-top: 60px;
+}
+.main-content {
+  padding-top: 5rem;
+  margin: 0 50px;
+}
+.index-main {
+  padding-bottom: 3rem;
+}
+.about {
+  position: relative;
+  margin: 0 150px;
+  padding-bottom: 80px;
+}
+.history {
+  padding-top: 30px;
+  border-top: 1px solid #313131;
+}
+.home-text-slider .home-text {
+  padding: 10px;
+  outline: none;
+}
+.home-text-slider .home-text p {
+  font-size: 1.4rem;
+}
+.home-text p {
+  color: #747474;
+  padding-bottom: 1rem;
+}
+.home-text p a {
+  color: #a9a7a7;
+  border-bottom: 1px solid #a9a7a7;
+}
+.home-text-slider {
+  position: relative;
+}
+.home-text-slider .home-text h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+.clients-container {
+  margin-top: 50px;
+  padding: 50px;
+  padding-bottom: 0;
+  border-top: 1px solid #313131;
+}
+.c-card {
+  text-align: center;
+  background: #2a2833;
+}
+.c-card a {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #6b6b6b;
+  width: 100%;
+  padding: 100px 10px;
+  display: inline-block;
+  transition: all 1s ease;
+}
+.c-card a:hover {
+  color: white;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ui.horizontal.list>.item {
+  color: #929292;
+}
+.main-content h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.works {
+  column-count: 3;
+  padding: 0 50px;
+}
+.work-column {
+  padding-bottom: 15px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow .5s ease-out, transform .5s ease-out, opacity .3s ease-out;
+}
+.work-column img {
+  opacity: .7;
+  transition: all 1s ease;
+}
+.work-column:hover {
+  transform: translate(0, -3px);
+}
+.work-column:hover img {
+  opacity: 1;
+}
+.info {
+  background: #100F13; 
+  padding: 30px;
+}
+.info p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.info p span {
+  font-size: .9rem;
+  padding-left: 10px;
+  color: #a29f9f;
+  text-transform: none;
+}
+.work-column a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-content a:hover,
+.footer-content a,
+.ui.horizontal.list>.item:hover {
+  color: white;
+  transition: all 1s ease;
+}
+.copyright a {
+  padding-right: 10px;
+}
+.profile-content {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.profile-content h2 {
+  font-size: 2.4rem;
+  padding-bottom: 1rem;
+}
+.sections {
+  padding-top: 60px;
+}
+.devices {
+  padding: 50px 0;
+  border-top: 1px solid #ffffff24;
+  border-bottom: 1px solid #ffffff24;
+}
+.apple-device {
+  width: 90%;
+}
+.path {
+  padding: 40px;
+  background: #100F13;
+  margin-top: 60px;
+  position: relative;
+}
+.text-links a {
+  color: lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.path:first-child {
+  border-bottom: 1px solid white;
+}
+.client-text {
+  text-align: center;
+}
+.clients-container .ui.grid>.column {
+  padding: .2rem;
+}
+footer {
+  padding: 30px;
+  border-top: 1px solid #313131;
+  margin: 60px 50px 0;
+}
+@media screen and (max-width: 1145px) {
+  .about {
+    margin: 0 50px;
+  }
+  .works {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .hero {
+    min-height: 50vw;
+    max-height: inherit;
+  }
+  .hero-overlay {
+    position: inherit;
+  }
+  .hero-overlay p {
+    padding: 10px;
+  }
+  .hero-content {
+    position: relative;
+    left: auto;
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+  .clients-container {
+    border: 0;
+    padding: 0;
+  }
+  .clients-container .ui.container>.ui.stackable.grid>.column, .clients-container .ui.container>.ui.stackable.grid>.row>.column {
+    width: 33%;
+  }
+  .client-text {
+    padding-top: 40px;
+  }
+  .main-content h1 {
+    text-align: left;
+  }
+} 
+@media only screen and (max-width: 900px) {
+  .ui.secondary.menu .toc.item.toogle-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .ui.secondary.menu .right.menu {
+    display: none;
+  }
+  .left.menu,
+  .logo {
+    flex: 1;
+  }
+  .logo img.ui.image {
+    float: right;
+    width: 70px;
+    transition: all .9s ease;
+  }
+  .main-content {
+    padding-top: 0;
+  }
+  .about {
+    margin: 0;
+    padding-top: 30px;
+  }
+  .works {
+    column-count: 2;
+  }
+  .arrows {
+    display: none;
+  }
+  .home-text-slider .home-text h3,
+  .home-text-slider .home-text p {
+    font-size: inherit;
+  }
+  .home-text p {
+    padding-bottom: 1rem;
+  }
+  .path {
+    padding: 20px;
+  }
+  .bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .clients-container  .ui.container>.ui.stackable.grid>.column, .clients-container  .ui.container>.ui.stackable.grid>.row>.column {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+ .clients-container .ui.container>.ui.stackable.grid>.column, .clients-container .ui.container>.ui.stackable.grid>.row>.column  {
+      width: 48%!important;
+      padding: .2rem !important;
+      margin: 0 .2rem !important;
+  } 
+  .works {
+    column-gap: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-card a {
+    font-size: 1.5rem;
+    padding: 80px 10px;
+  }
+  .works {
+    column-count: 1;
+}
+}
+@media screen and (max-width: 500px) {
+  .hero{
+    min-height: 60vw;
+  }
+  header .primary-menu {
+    padding: 15px 20px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+  .main-content {
+    margin: 0;
+  }
+  footer {
+    margin: 0;
+    padding: 15px;
+  }
+  .main-content {
+    padding-top: 0;
+  }
+  .clients-container {
+    padding-bottom: 40px;
+  }
+  .about {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  .c-card a {
+    font-size: 1.3rem;
+    padding: 70px 10px;
+  }
+}
