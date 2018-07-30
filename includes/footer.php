@@ -1,7 +1,7 @@
 <footer>
     	  <div class="ui container">
     	    <div class="footer-content">
-              <div class="copyright">©2018 <a href="">Gamaliel Rausch</a> All rights reserved</div>
+              <div class="copyright">&copy;<?php echo date("Y"); ?> Gamaliel Rausch All rights reserved</div>
               <div class="right-content">
                 <div class="ui horizontal list">
                   <a class="item">Support</a>
@@ -18,11 +18,11 @@
       </div> <!-- wrapper -->
     </div> <!-- pusher -->
   </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="core/semantic.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/slick.min.js"></script> 
+    <script defer src="<?php bloginfo('template_url'); ?>/assets/js/1.12.4/jquery.min.js"></script>
+    <script defer src="<?php bloginfo('template_url'); ?>/assets/core/semantic.min.js"></script>
+    <script defer src="<?php bloginfo('template_url'); ?>/assets/core/components/search.js"></script>
+    <script defer src="<?php bloginfo('template_url'); ?>/assets/js/slick.min.js"></script>
+    <script defer src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script>
     <?php wp_footer(); ?>
   </body>
 </html>

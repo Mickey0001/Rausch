@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
   <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rausch</title>
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --> 
+    <meta name="description" content="<?php bloginfo('description'); ?>"> 
+    <title>
+      <?php bloginfo('name'); ?> |
+      <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
+    </title>
+
+    <?php bloginfo('name'); ?> |
     <link rel="stylesheet" type="text/css" href="core/semantic.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+
+
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
