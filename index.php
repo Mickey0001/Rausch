@@ -24,7 +24,7 @@
                           <?php endwhile;
 
                           else :
-                            echo '<p>No Content Found.</p>';
+                            echo '<p></p>';
 
                           endif;
                             

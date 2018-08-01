@@ -22,11 +22,13 @@
   <body <?php body_class(); ?>>
   <div class="pusher">
     <div class="wrapper">
-    <header>
+          <?php $args = array('theme_location' => 'primary'); ?>
+          <?php wp_nav_menu($args);?>
+          <header>
            <div class="ui left sidebar large menu">
-              <div class="vert-menu">
-                  <a href="index.html" class="item">Home</a>
-                  <a href="<?php echo get_permalink('about.php');?>" class="item">About</a>
+           <div class="vert-menu">
+                  <a href="<?php echo home_url(); ?>" class="item">Home</a>
+                  <a href="" class="item">About</a>
                   <a href="work.html" class="item">My Work</a>
                   <a href="client.html" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
@@ -37,10 +39,10 @@
               <div class="ui secondary inverted menu">
                <div class="left menu">
                   <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
-                  <a href="index.html" class="logo"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" width="100"  class="ui image"></a>
+                  <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" width="100"  class="ui image"></a>
                 </div>
                 <div class="right menu">
-                  <a href="index.html" class="item active">Home</a>
+                  <a href="<?php echo home_url(); ?>" class="item active">Home</a>
                   <a href="" class="item">About</a>
                   <a href="" class="item">My Work</a>
                   <a href="" class="item">Clients</a>
@@ -50,3 +52,4 @@
               </div>
     		</div> <!-- site branding -->
     	</header> <!-- header -->
+

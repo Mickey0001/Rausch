@@ -1,6 +1,7 @@
 <?php
-function wptutsplus_register_theme_menu() {
-    register_nav_menu( 'primary', 'Main Navigation Menu' );
-}
-add_action( 'init', 'wptutsplus_register_theme_menu' );
+    register_nav_menus(array(
+        'primary' => __('Primary Menu'),
+        'mobile' => __('Mobile Menu'),
+        'footer' => __('Footer Menu')
+    ));
 ?>
