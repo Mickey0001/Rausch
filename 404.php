@@ -1,34 +1,20 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage Rauch
- * @since 1.0
- * @version 1.0
- */
-
-get_header(); ?>
-
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'rausch' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
-
-<?php get_footer();
+  get_header(); ?>
+<section id="section-block" class="error-page">
+	<div class="ui container">
+		<div class="ui two column stackable grid">
+			<div class="column">
+				<div class="error-404 text-center">
+					<h1><?php esc_attr_e('4','quality'); ?><i class="fa fa-frown-o"></i><?php esc_attr_e('4','quality'); ?> </h1>
+					<h2><?php _e('Oops! Page not found','quality'); ?></h2>
+					<p><?php _e('We are sorry, but the page you are looking for does not exist.','quality'); ?></p>
+					<div class="btn-block text-center">
+						<a href="<?php echo esc_html(site_url());?>" class="btn-large"><i class="fa fa-hand-o-left text-white"></i><?php _e('Back to Homepage','quality'); ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 404 Error Section -->
+<?php get_footer(); ?>
