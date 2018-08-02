@@ -4,7 +4,7 @@
               <div class="copyright">&copy;<?php echo date("Y"); ?> <a href=""> Gamaliel Rausch</a>All rights reserved</div>
               <div class="right-content">
                 <div class="ui horizontal list">
-                <?php $args = array('theme_location' => 'primary'); ?>
+                <?php $args = array('theme_location' => 'footer'); ?>
                   <?php wp_nav_menu($args);?>
                   <a class="item">Support</a>
                   <a class="item">Contact Us</a>

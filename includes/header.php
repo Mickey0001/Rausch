@@ -21,35 +21,58 @@
   </head>
   <body <?php body_class(); ?>>
   <div class="pusher">
-    <div class="wrapper">
-          <?php $args = array('theme_location' => 'primary'); ?>
-          <?php wp_nav_menu($args);?>
+    <div class="wrapper"> 
           <header>
-           <div class="ui left sidebar large menu">
+
+         <div class="ui secondary vertical pointing menu">
+         <?php
+           wp_nav_menu( array(
+               'menu'              => 'primary',
+               'theme_location'    => 'primary',
+               'depth'             => 2,
+               'container'         => 'div',
+               'container_class'   => 'collapse navbar-collapse',
+       'container_id'      => 'bs-example-navbar-collapse-1',
+               'menu_class'        => 'nav navbar-nav',
+               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+               'walker'            => new understrap_WP_Bootstrap_Navwalker())
+           );
+       ?>                   
+</div>
+
+           <!-- <div class="ui left sidebar large menu">
            <div class="vert-menu">
-                  <a href="<?php echo home_url(); ?>" class="item">Home</a>
+                  <a href=">" class="item">
+                  </a>
+                  <a href="" class="item">About
+
+                   
+                  </a>
+                  <a href="work.html" class="item">My Work</a>
+                  <a href="client.html" class="item">Clients</a>
+                  <a href="tel:015901076051" class="item">01591076041</a>
+                  <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
+              </div> 
+            </div>  -->
+
+          <!-- Mobile side menu -->
+          <!-- <div class="primary-menu">
+              <div class="ui secondary inverted menu">
+               <div class="left menu">
+                  <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
+                  <a href="" class="logo"><img src="/assets/images/logo.png" width="100"  class="ui image"></a>
+                </div>
+                <div class="right menu">
+                <a href="" class="item">Home</a>
                   <a href="" class="item">About</a>
                   <a href="work.html" class="item">My Work</a>
                   <a href="client.html" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
                   <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
-              </div> <!-- .left Menu -->
-            </div> <!-- listing menut -->
-          <div class="primary-menu">
-              <div class="ui secondary inverted menu">
-               <div class="left menu">
-                  <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
-                  <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" width="100"  class="ui image"></a>
                 </div>
-                <div class="right menu">
-                  <a href="<?php echo home_url(); ?>" class="item active">Home</a>
-                  <a href="" class="item">About</a>
-                  <a href="" class="item">My Work</a>
-                  <a href="" class="item">Clients</a>
-                  <a href="tel:015901076051" class="item">01591076041</a>
-                  <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
-                </div>
-              </div>
+              </div> -->
+              <!-- Mobile side menu -->
+
     		</div> <!-- site branding -->
     	</header> <!-- header -->
 
