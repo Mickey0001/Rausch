@@ -4,7 +4,6 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --> 
     <meta name="description" content="<?php bloginfo('description'); ?>"> 
     <title>
       <?php bloginfo('name'); ?> |
@@ -20,59 +19,31 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-  <div class="pusher">
-    <div class="wrapper"> 
-          <header>
-
-         <div class="ui secondary vertical pointing menu">
-         <?php
-           wp_nav_menu( array(
-               'menu'              => 'primary',
-               'theme_location'    => 'primary',
-               'depth'             => 2,
-               'container'         => 'div',
-               'container_class'   => 'collapse navbar-collapse',
-       'container_id'      => 'bs-example-navbar-collapse-1',
-               'menu_class'        => 'nav navbar-nav',
-               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-               'walker'            => new understrap_WP_Bootstrap_Navwalker())
-           );
-       ?>                   
-</div>
-
-           <!-- <div class="ui left sidebar large menu">
-           <div class="vert-menu">
-                  <a href=">" class="item">
-                  </a>
-                  <a href="" class="item">About
-
-                   
-                  </a>
-                  <a href="work.html" class="item">My Work</a>
-                  <a href="client.html" class="item">Clients</a>
+  <header>
+           <div class="ui left sidebar large menu">
+              <div class="vert-menu">
+                  <a href="home" class="item">Home</a>
+                  <a href="about" class="item">About</a>
+                  <a href="work" class="item">My Work</a>
+                  <a href="client" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
                   <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
-              </div> 
-            </div>  -->
-
-          <!-- Mobile side menu -->
-          <!-- <div class="primary-menu">
+              </div> <!-- .left Menu -->
+            </div> <!-- listing menut -->
+          <div class="primary-menu">
               <div class="ui secondary inverted menu">
                <div class="left menu">
-                  <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
-                  <a href="" class="logo"><img src="/assets/images/logo.png" width="100"  class="ui image"></a>
+                <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
+                <a href="home" class="logo"><img src="images/logo.png" width="100"  class="ui image"></a>
                 </div>
                 <div class="right menu">
-                <a href="" class="item">Home</a>
-                  <a href="" class="item">About</a>
-                  <a href="work.html" class="item">My Work</a>
-                  <a href="client.html" class="item">Clients</a>
+                  <a href="home" class="active item">Home</a>
+                  <a href="about" class="item">About</a>
+                  <a href="work" class="item">My Work</a>
+                  <a href="client" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
                   <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
                 </div>
-              </div> -->
-              <!-- Mobile side menu -->
-
+              </div>
     		</div> <!-- site branding -->
     	</header> <!-- header -->
-

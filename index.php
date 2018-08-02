@@ -30,8 +30,7 @@
                             
                           ?>
               </div> <!-- column -->
-              <div class="middle aligned column">
-                          <?php include('home_text.php'); ?>
+              
               </div> <!-- column -->
             </div> <!-- grid -->
           </div> <!-- container -->
