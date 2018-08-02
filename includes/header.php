@@ -34,7 +34,7 @@
               <div class="ui secondary inverted menu">
                <div class="left menu">
                 <a class="toc item toogle-menu"><span></span><p>Menu</p></a>
-                <a href="home" class="logo"><img src="images/logo.png" width="100"  class="ui image"></a>
+                <a href="home" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/logo.png" width="100"  class="ui image"></a>
                 </div>
                 <div class="right menu">
                   <a href="home" class="active item">Home</a>

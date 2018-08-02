@@ -1,7 +1,7 @@
 <?php include('includes/header.php'); ?>
     	
         <div class="hero">
-         <img src="images/hero.jpg" alt="" class="ui image">
+         <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/hero.jpg" alt="" class="ui image">
           <div class="hero-overlay">
             <p>Rausch <span>Design and Development</span></p>
           </div> <!-- hero overlay -->
@@ -20,42 +20,42 @@
               <div class="ui four column stackable grid">
                 <div class="column">
                   <div class="c-card">
-                    <a href="project.html">St. Georg</a>
+                    <a href="project">St. Georg</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">PlanPooch</a>
+                    <a href="project">PlanPooch</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">Paw Pack</a>
+                    <a href="project">Paw Pack</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">Evergreen</a>
+                    <a href="project">Evergreen</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">St. Georg</a>
+                    <a href="project">St. Georg</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">PlanPooch</a>
+                    <a href="project">PlanPooch</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">Paw Pack</a>
+                    <a href="project">Paw Pack</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project.html">Evergreen</a>
+                    <a href="project">Evergreen</a>
                   </div> <!-- c-card -->
                 </div> <!-- column -->
               </div> <!-- grid -->

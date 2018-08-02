@@ -6,11 +6,11 @@
                 <div class="ui horizontal list">
                 <?php $args = array('theme_location' => 'footer'); ?>
                   <?php wp_nav_menu($args);?>
-                  <a class="item">Support</a>
-                  <a class="item">Contact Us</a>
-                  <a class="item">Services</a>
-                  <a class="item">Reviews</a>
-                  <a class="item">Credits</a>
+                  <a class="item" href="support">Support</a>
+                  <a class="item" href="contact">Contact Us</a>
+                  <a class="item" href="services">Services</a>
+                  <a class="item" href="reviews">Reviews</a>
+                  <a class="item" href="credits">Credits</a>
                 </div> <!-- list -->
               </div>
     	    </div> <!-- footer content -->
