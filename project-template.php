@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: Project Page Template
+Template Name: Project Template
 
 */
 include('includes/header.php');

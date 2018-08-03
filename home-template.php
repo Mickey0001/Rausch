@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: Home Page Template
+Template Name: Home Template
 
 */
 include('includes/header.php');

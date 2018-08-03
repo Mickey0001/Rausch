@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: About Page Template
+Template Name: About Template
 
 */
 include('includes/header.php');

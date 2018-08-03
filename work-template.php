@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: Work Page Template
+Template Name: Work Template
 
 */
 include('includes/header.php');
