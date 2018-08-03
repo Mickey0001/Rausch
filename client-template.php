@@ -1,20 +1,44 @@
-<?php include('includes/header.php'); ?>
-    	
-        <div class="hero">
-         <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/hero.jpg" alt="" class="ui image">
-          <div class="hero-overlay">
-            <p>Rausch <span>Design and Development</span></p>
-          </div> <!-- hero overlay -->
-        </div> <!-- hero -->
-    	<div class="main-content">
+<?php
+
+/*
+
+Template Name: Client Page Template
+
+*/
+include('includes/header.php');
+?>
+
+ <div class="pusher">
+    <div class="wrapper">
+
+		<div class="hero">
+           <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/hero.jpg" alt="" class="ui image">
+            <div class="hero-overlay">
+              <p><?php bloginfo('name'); ?><span><?php bloginfo('description'); ?></span></p>
+            </div> <!-- hero overlay -->
+				</div> <!-- hero -->
+				
+        <div class="main-content">
           <div class="ui text container">
             <div class="home-text client-text">
-              <h3>My Clients</h3>
-              <div class="ui horizontal divider"></div>
-              <p>My clients porfolio spans a range of industries including interior design, property, jewellery and the arts. I combina a clear design aestheti with solid commercial rationale to create projects that truly inspire, inform and engage.</p>
-            </div> <!-- home-text -->
+
+													<?php if(have_posts()) : ?>
+											<?php while(have_posts()) : the_post(); ?>
+                      <h3>
+													<?php the_title(); ?>
+                      </h3>
+                      <div class="ui horizontal divider"></div>
+
+											<?php the_content(); ?>
+										</div><!-- /.blog-post -->
+										<?php endwhile; ?>
+									<?php else : ?>
+										<p><?php __('No Page Found'); ?></p>
+									<?php endif; ?>
+									
+                  </div> <!-- home-text -->
           </div> <!-- container -->
-    	
+
           <div class="clients-container">
             <div class="ui container">
               <div class="ui four column stackable grid">
@@ -62,5 +86,12 @@
             </div> <!-- ui container -->
           </div> <!-- clients-container -->
     	</div> <!-- main content -->
-      
+
+
+
+      </div> <!-- wrapper -->
+    </div> <!-- pusher -->
+  </div>
+
+
 <?php include('includes/footer.php'); ?>
