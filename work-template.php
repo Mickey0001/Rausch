@@ -11,26 +11,61 @@ include('includes/header.php');
  <div class="pusher">
     <div class="wrapper">
 
- 
-										<?php if(have_posts()) : ?>
-											<?php while(have_posts()) : the_post(); ?>
-
-											<?php the_content(); ?>
-                      </p>
-
-										<?php endwhile; ?>
-									<?php else : ?>
-										<p><?php __('No Page Found'); ?></p>
-                  <?php endif; ?>
-                  </div> <!-- home-text -->
-                    </div> <!-- home-text -->
-                  </div> <!-- column -->
-                </div> <!-- ui grid -->
-              </div> <!-- home-text-slider -->
-            </div> <!-- history -->
-          </div> <!-- ui container -->
+            	<div class="main-content">
+         <div class="ui text container">
+           <div class="home-text profile-content">
+             <h2>	<?php the_title(); ?></h2>
+           </div> <!-- home text -->
+         </div> <!-- ui text container -->
+           
+         <div class="works">
+            <div class="ui fluid container">
+              <div class="work-column">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/rihanna.jpg" class="ui image">
+                <div class="info">
+                  <p>Rihanna <span>Digital</span></p>
+                </div>
+                <a href="project"></a>
+              </div>
+              <div class="work-column">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
+                <div class="info">
+                  <p>Rihanna <span>Digital</span></p>
+                </div>
+                <a href=""></a>
+              </div> 
+              <div class="work-column">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
+                <div class="info">
+                  <p>Rihanna <span>Digital</span></p>
+                </div>
+                <a href="project"></a>
+              </div>
+              <div class="work-column">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/rihanna.jpg" class="ui image">
+                <div class="info">
+                  <p>Rihanna <span>Digital</span></p>
+                </div>
+                <a href="project"></a>
+              </div> 
+              <div class="work-column">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/rihanna.jpg" class="ui image">
+                <div class="info">
+                  <p>Rihanna <span>Digital</span></p>
+                </div>
+                <a href="project"></a>
+              </div>
+             <div class="work-column">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
+                <div class="info">
+                  <p>Rihanna <span>Digital</span></p>
+                </div>
+                <a href="project"></a>
+              </div> 
+            </div> <!-- ui fluid container -->
+    	  </div> <!-- works -->
     	</div> <!-- main-content -->
-									
+    	
 
 
 
