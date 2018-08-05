@@ -148,7 +148,7 @@ font-family: Coco-Regular;
 }
 .hero-overlay {
   padding: .6rem;
-  bottom: 0;
+  bottom: 0; /*testing*/
   left: 0;
   right: 0;
   top: 0;
