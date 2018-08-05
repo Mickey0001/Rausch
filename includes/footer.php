@@ -6,11 +6,10 @@
                 <div class="ui horizontal list">
                 <?php $args = array('theme_location' => 'footer'); ?>
                   <?php wp_nav_menu($args);?>
-                  <a class="item" href="support">Support</a>
-                  <a class="item" href="contact">Contact Us</a>
-                  <a class="item" href="services">Services</a>
-                  <a class="item" href="reviews">Reviews</a>
-                  <a class="item" href="credits">Credits</a>
+                  <a href="work" class="item">My Work</a>
+                  <a href="client" class="item">Clients</a>
+                  <a href="tel:015901076051" class="item">01591076041</a>
+                  <a href="mailto:gamaliel.rausch@gmail.com?subject=Rausch Creative enquiry" class="item">gamaliel.rausch@gmail.com</a>
                 </div> <!-- list -->
               </div>
     	    </div> <!-- footer content -->

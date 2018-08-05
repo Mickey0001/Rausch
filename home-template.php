@@ -11,13 +11,17 @@ include('includes/header.php');
  <div class="pusher">
     <div class="wrapper">
 
+<?php if ( get_header_image() ) : ?>
 		<div class="hero">
-           <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/hero.jpg" alt="" class="ui image">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+           <img src="<?php header_image(); ?>" alt="Hero" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui image">
             <div class="hero-overlay">
               <p><?php bloginfo('name'); ?><span><?php bloginfo('description'); ?></span></p>
             </div> <!-- hero overlay -->
+						</a>
 				</div> <!-- hero -->
-				
+				<?php endif; ?> 
+
 				<div class="main-content index-main">
           <div class="ui container">
             <div class="ui two column stackable grid">
@@ -53,4 +57,3 @@ include('includes/header.php');
   </div>
 
 	<?php include('includes/footer.php'); ?>
-
