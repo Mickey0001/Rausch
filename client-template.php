@@ -41,14 +41,14 @@ include('includes/header.php');
                   </div> <!-- home-text -->
           </div> <!-- container -->
 
-          
+
 
           <div class="clients-container">
             <div class="ui container">
               <div class="ui four column stackable grid">
                 <div class="column">
                   <div class="c-card">
-                    <a href="project">St. Georg</a>
+                    <a href="project"><?php echo get_theme_mod('client-thumbnails-headline') ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">

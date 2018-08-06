@@ -61,13 +61,13 @@ add_action( 'after_setup_theme', 'themename_custom_header_setup' );
             ));
 
             $wp_customize->add_setting('client-thumbnails-headline', array(
-                'default' => 'St. Georg'
+                'default' => 'Client Thumbnail Heading Goes Here',
             ));
 
             $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'lient-thumbnails-headline-control', array(
-                'label' => 'Headline',
+                'label' => 'Client Thumbnail Headline',
                 'section' => 'client-thumbnails-section',
-                'settings' => 'client-thumbnails-headline'
+                'settings' => 'client-thumbnails-headline',
             )));
         }
 
