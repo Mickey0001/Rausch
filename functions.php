@@ -82,35 +82,63 @@ function themename_first_client_thumbnails_setup($wp_customize)
             )));
         }
 
-        function themename_second_client_thumbnails_setup($wp_customize)
+function themename_second_client_thumbnails_setup($wp_customize)
 
-        {
-            $wp_customize->add_section('client-second-thumbnail-section', array(
-                'title' => 'Second Client Thumbnail',
-            ));
-        
-            $wp_customize->add_setting('client-second-thumbnail-headline', array(
-                'default' => 'Client Thumbnail Heading Goes Here',
-            ));
-        
-            $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-second-thumbnail-headline-control', array(
-                'label' => 'Second Thumbnail Headline',
-                'section' => 'client-second-thumbnail-section',
-                'settings' => 'client-second-thumbnail-headline',
-            )));
-        
-            $wp_customize->add_setting('client-second-thumbnail-link');
-        
-            $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-second-thumbnail-link-control', array(
-                'label' => 'second Thumbnail Link',
-                'section' => 'client-second-thumbnail-section',
-                'settings' => 'client-second-thumbnail-link',
-                'type' => 'dropdown-pages'
-            )));
-        }
+    {
+        $wp_customize->add_section('client-second-thumbnail-section', array(
+            'title' => 'Second Client Thumbnail',
+        ));
+
+        $wp_customize->add_setting('client-second-thumbnail-headline', array(
+            'default' => 'Client Thumbnail Heading Goes Here',
+        ));
+
+        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-second-thumbnail-headline-control', array(
+            'label' => 'Second Thumbnail Headline',
+            'section' => 'client-second-thumbnail-section',
+            'settings' => 'client-second-thumbnail-headline',
+        )));
+
+        $wp_customize->add_setting('client-second-thumbnail-link');
+
+        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-second-thumbnail-link-control', array(
+            'label' => 'Second Thumbnail Link',
+            'section' => 'client-second-thumbnail-section',
+            'settings' => 'client-second-thumbnail-link',
+            'type' => 'dropdown-pages'
+        )));
+    }
+
+    function themename_third_client_thumbnails_setup($wp_customize)
+
+    {
+        $wp_customize->add_section('client-third-thumbnail-section', array(
+            'title' => 'Third Client Thumbnail',
+        ));
+    
+        $wp_customize->add_setting('client-third-thumbnail-headline', array(
+            'default' => 'Client Thumbnail Heading Goes Here',
+        ));
+    
+        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-third-thumbnail-headline-control', array(
+            'label' => 'third Thumbnail Headline',
+            'section' => 'client-third-thumbnail-section',
+            'settings' => 'client-third-thumbnail-headline',
+        )));
+    
+        $wp_customize->add_setting('client-third-thumbnail-link');
+    
+        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-third-thumbnail-link-control', array(
+            'label' => 'Third Thumbnail Link',
+            'section' => 'client-third-thumbnail-section',
+            'settings' => 'client-third-thumbnail-link',
+            'type' => 'dropdown-pages'
+        )));
+    }
         
 add_action('customize_register', 'themename_first_client_thumbnails_setup');
 add_action('customize_register', 'themename_second_client_thumbnails_setup');
+add_action('customize_register', 'themename_third_client_thumbnails_setup');
 
 
 

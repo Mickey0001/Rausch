@@ -48,18 +48,20 @@ include('includes/header.php');
               <div class="ui four column stackable grid">
                 <div class="column">
                   <div class="c-card">
-                    <a href="<?php echo get_permalink(get_theme_mod('client-frist-thumbnail-link')); ?>">
-                     <?php echo get_theme_mod('client-frist-thumbnail-headline'); ?></a> 
+                    <a href="<?php echo get_permalink(get_theme_mod('client-first-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-first-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">PlanPooch</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-second-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-second-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">Paw Pack</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-third-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-third-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
