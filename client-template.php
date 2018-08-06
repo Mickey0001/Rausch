@@ -41,6 +41,8 @@ include('includes/header.php');
                   </div> <!-- home-text -->
           </div> <!-- container -->
 
+          
+
           <div class="clients-container">
             <div class="ui container">
               <div class="ui four column stackable grid">

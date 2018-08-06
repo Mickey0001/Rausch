@@ -1,10 +1,13 @@
 <?php
-    register_nav_menus(array(
+    register_nav_menus
+    (array(
         'primary' => __('Primary Menu'),
     ));
 
-    function themename_custom_header_setup() {
-    $defaults = array(
+    function themename_custom_header_setup() 
+    {
+    $defaults = array
+    (
         // Default Header Image to display
         'default-image'         => get_template_directory_uri() . '/images/headers/default.jpg',
         // Display the header text along with the image
@@ -27,7 +30,8 @@
         'admin-preview-callback'    => 'adminpreview_cb',
         );
         
-        $header_info = array(
+        $header_info = array
+        (
             'width'         => 2000,
             'height'        => 1105,
             'default-image' => get_template_directory_uri() . '/assets/images/hero.jpg',
@@ -35,16 +39,42 @@
 
         add_theme_support( 'custom-header', $header_info );
          
-        $header_images = array(
+        $header_images = array
+        (
             'hero' => array(
                     'url'           => get_template_directory_uri() . '/assets/images/hero.jpg',
                     'thumbnail_url' => get_template_directory_uri() . '/assets/images/hero.jpg',
                     'description'   => 'Hero',
             ),
         );
+
         register_default_headers( $header_images );
 }
+
 add_action( 'after_setup_theme', 'themename_custom_header_setup' );
-?>
+
+    function themename_client_thumbnails_setup($wp_customize) 
+
+        {
+            $wp_customize->add_section('client-thumbnails-section', array(
+                'title' => 'Client Thumbnails'
+            ));
+
+            $wp_customize->add_setting('client-thumbnails-headline', array(
+                'default' => 'St. Georg'
+            ));
+
+            $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'lient-thumbnails-headline-control', array(
+                'label' => 'Headline',
+                'section' => 'client-thumbnails-section',
+                'settings' => 'client-thumbnails-headline'
+            )));
+        }
+
+    add_action('customize_register', 'themename_client_thumbnails_setup');
+
+
+
+
 
 
