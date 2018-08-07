@@ -618,23 +618,114 @@ function themename_first_about_slider_setup($wp_customize)
     ));
 
     $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-first-slider-headline-control', array(
-        'label' => 'First Slider Headline',
+        'label' => 'Slider Headline',
         'section' => 'about-first-slider-section',
         'settings' => 'about-first-slider-headline',
     )));
 
-    $wp_customize->add_setting('about-first-slider-textarea', array(
-        'default' => 'Paragraph Text Goes Here',
+    $wp_customize->add_setting('about-first-slider-paragraph-one-textarea', array(
+        'default' => 'First Paragraph',
     ));
 
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-first-slider-textarea', array(
-        'label' => 'First Slider Headline',
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-first-slider-paragraph-one-textarea', array(
+        'label' => 'First Paragraph',
         'type' => 'textarea',
         'section' => 'about-first-slider-section',
-        'settings' => 'about-first-slider-textarea',
+        'settings' => 'about-first-slider-paragraph-one-textarea',
+    )));
+
+    $wp_customize->add_setting('about-first-slider-paragraph-two-textarea', array(
+        'default' => 'Second Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-first-slider-paragraph-two-textarea', array(
+        'label' => 'Second Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-first-slider-section',
+        'settings' => 'about-first-slider-paragraph-two-textarea',
     )));
 
 
+}
+
+function themename_second_about_slider_setup($wp_customize)
+
+{
+    $wp_customize->add_section('about-second-slider-section', array(
+        'title' => 'About - Second Slide',
+    ));
+
+    $wp_customize->add_setting('about-second-slider-headline', array(
+        'default' => 'Test',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-second-slider-headline-control', array(
+        'label' => 'Slider Headline',
+        'section' => 'about-second-slider-section',
+        'settings' => 'about-second-slider-headline',
+    )));
+
+    $wp_customize->add_setting('about-second-slider-paragraph-one-textarea', array(
+        'default' => 'First Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-second-slider-paragraph-one-textarea', array(
+        'label' => 'Second Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-second-slider-section',
+        'settings' => 'about-second-slider-paragraph-one-textarea',
+    )));
+
+    $wp_customize->add_setting('about-second-slider-paragraph-two-textarea', array(
+        'default' => 'Second Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-second-slider-paragraph-two-textarea', array(
+        'label' => 'Second Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-second-slider-section',
+        'settings' => 'about-second-slider-paragraph-two-textarea',
+    )));
+}
+
+function themename_third_about_slider_setup($wp_customize)
+
+{
+    $wp_customize->add_section('about-third-slider-section', array(
+        'title' => 'About - Third Slide',
+    ));
+
+    $wp_customize->add_setting('about-third-slider-headline', array(
+        'default' => 'Test',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-third-slider-headline-control', array(
+        'label' => 'Slider Headline',
+        'section' => 'about-third-slider-section',
+        'settings' => 'about-third-slider-headline',
+    )));
+
+    $wp_customize->add_setting('about-third-slider-paragraph-one-textarea', array(
+        'default' => 'First Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-third-slider-paragraph-one-textarea', array(
+        'label' => 'Second Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-third-slider-section',
+        'settings' => 'about-third-slider-paragraph-one-textarea',
+    )));
+
+    $wp_customize->add_setting('about-third-slider-paragraph-two-textarea', array(
+        'default' => 'Second Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-third-slider-paragraph-two-textarea', array(
+        'label' => 'third Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-third-slider-section',
+        'settings' => 'about-third-slider-paragraph-two-textarea',
+    )));
 }
 
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
@@ -656,4 +747,6 @@ add_action('customize_register', 'themename_fifth_project_thumbnails_setup');
 add_action('customize_register', 'themename_sixth_project_thumbnails_setup');
 
 add_action('customize_register', 'themename_first_about_slider_setup');
+add_action('customize_register', 'themename_second_about_slider_setup');
+add_action('customize_register', 'themename_third_about_slider_setup');
 
