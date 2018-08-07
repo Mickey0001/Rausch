@@ -9,14 +9,8 @@
       <?php bloginfo('name'); ?> |
       <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
     </title>
-    <!-- Semantic UI core CSS -->
-    <link href="<?php bloginfo('template_url'); ?>/assets/core/semantic.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('template_url'); ?>/assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-    <link href="<?php bloginfo('template_url'); ?>/assets/css/slick.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url'); ?>/assets/css/slick-theme.css" rel="stylesheet">
     <?php wp_head(); ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   </head>
   <body <?php body_class(); ?>>
   <header>

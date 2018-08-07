@@ -19,10 +19,6 @@
       </div> <!-- wrapper -->
     </div> <!-- pusher -->
   </div>
-    <script defer src="<?php bloginfo('template_url'); ?>/assets/js/1.12.4/jquery.min.js"></script>
-    <script defer src="<?php bloginfo('template_url'); ?>/assets/core/semantic.min.js"></script>
-    <script defer src="<?php bloginfo('template_url'); ?>/assets/js/slick.min.js"></script>
-    <script defer src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script>
     <?php wp_footer(); ?>
   </body>
 </html>
