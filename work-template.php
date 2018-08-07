@@ -20,6 +20,7 @@ include('includes/header.php');
 
          <div class="works">
             <div class="ui fluid container">
+
               <div class="work-column">
                 <img src=" <?php echo get_theme_mod('project-first-thumbnail-image');?>" class="ui image">
                 <div class="info">
@@ -32,41 +33,72 @@ include('includes/header.php');
                 </div>
                 <a href="<?php echo get_permalink(get_theme_mod('project-first-thumbnail-link')); ?>"></a>
               </div>
+
               <div class="work-column">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
+                <img src="<?php echo get_theme_mod('project-second-thumbnail-image');?>" class="ui image">
                 <div class="info">
-                  <p>Rihanna <span>Digital</span></p>
+                  <p>
+                    <?php echo get_theme_mod('project-second-thumbnail-headline');?>
+                  <span>
+                    <?php echo get_theme_mod('project-second-thumbnail-type');?>
+                  </span>
+                  </p>
                 </div>
-                <a href=""></a>
+                <a href="<?php echo get_permalink(get_theme_mod('project-second-thumbnail-link')); ?>"></a>
               </div> 
+
               <div class="work-column">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
+                <img src="<?php echo get_theme_mod('project-third-thumbnail-image');?>" class="ui image">
                 <div class="info">
-                  <p>Rihanna <span>Digital</span></p>
+                  <p>
+                     <?php echo get_theme_mod('project-second-thumbnail-headline');?>
+                  <span>
+                  <?php echo get_theme_mod('project-third-thumbnail-type');?>
+                  </span>
+                  </p>
                 </div>
-                <a href="project"></a>
+                <a href="<?php echo get_permalink(get_theme_mod('project-third-thumbnail-link')); ?>"></a>
               </div>
+
               <div class="work-column">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/rihanna.jpg" class="ui image">
-                <div class="info">
-                  <p>Rihanna <span>Digital</span></p>
-                </div>
-                <a href="project"></a>
-              </div> 
-              <div class="work-column">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/rihanna.jpg" class="ui image">
-                <div class="info">
-                  <p>Rihanna <span>Digital</span></p>
-                </div>
-                <a href="project"></a>
+                  <img src=" <?php echo get_theme_mod('project-fourth-thumbnail-image');?>" class="ui image">
+                  <div class="info">
+                    <p>
+                      <?php echo get_theme_mod('project-fourth-thumbnail-headline');?>
+                    <span>
+                      <?php echo get_theme_mod('project-fourth-thumbnail-type');?>
+                    </span>
+                    </p>
+                  </div>
+                  <a href="<?php echo get_permalink(get_theme_mod('project-fourth-thumbnail-link')); ?>"></a>
               </div>
-             <div class="work-column">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
-                <div class="info">
-                  <p>Rihanna <span>Digital</span></p>
-                </div>
-                <a href="project"></a>
-              </div> 
+
+              <div class="work-column">
+                  <img src=" <?php echo get_theme_mod('project-fifth-thumbnail-image');?>" class="ui image">
+                  <div class="info">
+                    <p>
+                      <?php echo get_theme_mod('project-fifth-thumbnail-headline');?>
+                    <span>
+                      <?php echo get_theme_mod('project-fifth-thumbnail-type');?>
+                    </span>
+                    </p>
+                  </div>
+                  <a href="<?php echo get_permalink(get_theme_mod('project-fifth-thumbnail-link')); ?>"></a>
+              </div>
+
+              <div class="work-column">
+                  <img src=" <?php echo get_theme_mod('project-sixth-thumbnail-image');?>" class="ui image">
+                  <div class="info">
+                    <p>
+                      <?php echo get_theme_mod('project-sixth-thumbnail-headline');?>
+                    <span>
+                      <?php echo get_theme_mod('project-sixth-thumbnail-type');?>
+                    </span>
+                    </p>
+                  </div>
+                  <a href="<?php echo get_permalink(get_theme_mod('project-sixth-thumbnail-link')); ?>"></a>
+              </div>
+
             </div> <!-- ui fluid container -->
     	  </div> <!-- works -->
     	</div> <!-- main-content -->

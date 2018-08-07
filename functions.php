@@ -341,9 +341,111 @@ function themename_first_project_thumbnails_setup($wp_customize)
             $wp_customize,
             'project-first-thumbnail-image',
             array(
-                'label'      => __( 'Project Image', 'theme_name' ),
+                'label'      => __( 'First Project Image', 'theme_name' ),
                 'section'    => 'project-first-thumbnail-section',
                 'settings'   => 'project-first-thumbnail-image'
+            )
+        )
+    );
+
+}
+
+function themename_second_project_thumbnails_setup($wp_customize)
+
+{
+    $wp_customize->add_section('project-second-thumbnail-section', array(
+        'title' => 'Second Project Thumbnail',
+    ));
+
+    $wp_customize->add_setting('project-second-thumbnail-headline', array(
+        'default' => 'Project',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-second-thumbnail-headline-control', array(
+        'label' => 'Second Project Thumbnail Headline',
+        'section' => 'project-second-thumbnail-section',
+        'settings' => 'project-second-thumbnail-headline',
+    )));
+
+    $wp_customize->add_setting('project-second-thumbnail-type', array(
+        'default' => 'Digital',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-second-thumbnail-type-control', array(
+        'label' => 'Second Project Thumbnail Type',
+        'section' => 'project-second-thumbnail-section',
+        'settings' => 'project-second-thumbnail-type',
+    )));
+
+    $wp_customize->add_setting('project-second-thumbnail-link');
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-second-thumbnail-link-control', array(
+        'label' => 'Second Project Thumbnail Link',
+        'section' => 'project-second-thumbnail-section',
+        'settings' => 'project-second-thumbnail-link',
+        'type' => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('project-second-thumbnail-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project-second-thumbnail-image',
+            array(
+                'label'      => __( 'Second Project Image', 'theme_name' ),
+                'section'    => 'project-second-thumbnail-section',
+                'settings'   => 'project-second-thumbnail-image'
+            )
+        )
+    );
+
+}
+
+function themename_third_project_thumbnails_setup($wp_customize)
+
+{
+    $wp_customize->add_section('project-third-thumbnail-section', array(
+        'title' => 'Third Project Thumbnail',
+    ));
+
+    $wp_customize->add_setting('project-third-thumbnail-headline', array(
+        'default' => 'Project',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-third-thumbnail-headline-control', array(
+        'label' => 'Third Project Thumbnail Headline',
+        'section' => 'project-third-thumbnail-section',
+        'settings' => 'project-third-thumbnail-headline',
+    )));
+
+    $wp_customize->add_setting('project-third-thumbnail-type', array(
+        'default' => 'Digital',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-third-thumbnail-type-control', array(
+        'label' => 'Third Project Thumbnail Type',
+        'section' => 'project-third-thumbnail-section',
+        'settings' => 'project-third-thumbnail-type',
+    )));
+
+    $wp_customize->add_setting('project-third-thumbnail-link');
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-third-thumbnail-link-control', array(
+        'label' => 'Third Project Thumbnail Link',
+        'section' => 'project-third-thumbnail-section',
+        'settings' => 'project-third-thumbnail-link',
+        'type' => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('project-third-thumbnail-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project-third-thumbnail-image',
+            array(
+                'label'      => __( 'Third Project Image', 'theme_name' ),
+                'section'    => 'project-third-thumbnail-section',
+                'settings'   => 'project-third-thumbnail-image'
             )
         )
     );
@@ -362,4 +464,6 @@ add_action('customize_register', 'themename_seventh_client_thumbnails_setup');
 add_action('customize_register', 'themename_eighth_client_thumbnails_setup');
 
 add_action('customize_register', 'themename_first_project_thumbnails_setup');
+add_action('customize_register', 'themename_second_project_thumbnails_setup');
+add_action('customize_register', 'themename_third_project_thumbnails_setup');
 
