@@ -1,8 +1,36 @@
 <?php
-    register_nav_menus
-    (array(
-        'primary' => __('Primary Menu'),
-    ));
+
+  if ( ! function_exists( 'add_script_style' ) ) {
+    function add_script_style() {
+
+        /* Register & Enqueue Styles. */
+        wp_register_style( 'semantic.min.css', get_template_directory_uri().'/assets/core/semantic.min.css' );
+        wp_enqueue_style( 'semantic.min.css' );
+
+        wp_register_style( 'style.css', get_template_directory_uri().'/assets/css/style.css' );
+        wp_enqueue_style( 'style.css' );
+
+        wp_register_style( 'slick.css', get_template_directory_uri().'/assets/css/slick.css' );
+        wp_enqueue_style( 'slick.css' );
+
+        wp_register_style( 'slick-theme.css', get_template_directory_uri().'/assets/css/slick-theme.css' );
+        wp_enqueue_style( 'slick-theme.css' );
+
+        /* Register & Enqueue scripts. */
+        wp_register_script( 'jquery.min.js', get_template_directory_uri().'/assets/js/jquery.min.js' );
+        wp_enqueue_script( 'jquery.min.js');
+
+        wp_register_script( 'main.js', get_template_directory_uri().'/assets/js/main.js' );
+        wp_enqueue_script( 'main.js');
+
+        wp_register_script( 'slick.min.js', get_template_directory_uri().'/assets/js/slick.min.js' );
+        wp_enqueue_script( 'slick.min.js');
+
+        wp_register_script( 'semantic.min.js', get_template_directory_uri().'/assets/core/semantic.min.js' );
+        wp_enqueue_script( 'semantic.min.js');
+        
+    }
+}
 
     function themename_custom_header_setup()
     {
@@ -270,40 +298,58 @@ function themename_eighth_client_thumbnails_setup($wp_customize)
     )));
 }
 
+//Custom Project Thumbnails
+function themename_first_project_thumbnails_setup($wp_customize)
 
-if ( ! function_exists( 'add_script_style' ) ) {
-    function add_script_style() {
+{
+    $wp_customize->add_section('project-first-thumbnail-section', array(
+        'title' => 'First Project Thumbnail',
+    ));
 
-        /* Register & Enqueue Styles. */
-        wp_register_style( 'semantic.min.css', get_template_directory_uri().'/assets/core/semantic.min.css' );
-        wp_enqueue_style( 'semantic.min.css' );
+    $wp_customize->add_setting('project-first-thumbnail-headline', array(
+        'default' => 'Project',
+    ));
 
-        wp_register_style( 'style.css', get_template_directory_uri().'/assets/css/style.css' );
-        wp_enqueue_style( 'style.css' );
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-first-thumbnail-headline-control', array(
+        'label' => 'First Project Thumbnail Headline',
+        'section' => 'project-first-thumbnail-section',
+        'settings' => 'project-first-thumbnail-headline',
+    )));
 
-        wp_register_style( 'slick.css', get_template_directory_uri().'/assets/css/slick.css' );
-        wp_enqueue_style( 'slick.css' );
+    $wp_customize->add_setting('project-first-thumbnail-type', array(
+        'default' => 'Digital',
+    ));
 
-        wp_register_style( 'slick-theme.css', get_template_directory_uri().'/assets/css/slick-theme.css' );
-        wp_enqueue_style( 'slick-theme.css' );
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-first-thumbnail-type-control', array(
+        'label' => 'First Project Thumbnail Type',
+        'section' => 'project-first-thumbnail-section',
+        'settings' => 'project-first-thumbnail-type',
+    )));
 
-        /* Register & Enqueue scripts. */
-        wp_register_script( 'jquery.min.js', get_template_directory_uri().'/assets/js/jquery.min.js' );
-        wp_enqueue_script( 'jquery.min.js');
+    $wp_customize->add_setting('project-first-thumbnail-link');
 
-        wp_register_script( 'main.js', get_template_directory_uri().'/assets/js/main.js' );
-        wp_enqueue_script( 'main.js');
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-first-thumbnail-link-control', array(
+        'label' => 'First Project Thumbnail Link',
+        'section' => 'project-first-thumbnail-section',
+        'settings' => 'project-first-thumbnail-link',
+        'type' => 'dropdown-pages'
+    )));
 
-        wp_register_script( 'slick.min.js', get_template_directory_uri().'/assets/js/slick.min.js' );
-        wp_enqueue_script( 'slick.min.js');
+    
+    $wp_customize->add_setting('little_header');
 
-        wp_register_script( 'semantic.min.js', get_template_directory_uri().'/assets/core/semantic.min.js' );
-        wp_enqueue_script( 'semantic.min.js');
-        
-    }
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'little_header', array(
+        'section' => 'project-first-thumbnail-section',
+        'label' => 'Little Header',
+        'settings' => 'little_header',
+        'width' => 355,
+        'height' => 200
+    )));
+
 }
 
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
+
 add_action('customize_register', 'themename_first_client_thumbnails_setup');
 add_action('customize_register', 'themename_second_client_thumbnails_setup');
 add_action('customize_register', 'themename_third_client_thumbnails_setup');
@@ -312,4 +358,6 @@ add_action('customize_register', 'themename_fifth_client_thumbnails_setup');
 add_action('customize_register', 'themename_sixth_client_thumbnails_setup');
 add_action('customize_register', 'themename_seventh_client_thumbnails_setup');
 add_action('customize_register', 'themename_eighth_client_thumbnails_setup');
+
+add_action('customize_register', 'themename_first_project_thumbnails_setup');
 

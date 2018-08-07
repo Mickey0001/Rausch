@@ -17,15 +17,20 @@ include('includes/header.php');
              <h2>	<?php the_title(); ?></h2>
            </div> <!-- home text -->
          </div> <!-- ui text container -->
-           
+
          <div class="works">
             <div class="ui fluid container">
               <div class="work-column">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/rihanna.jpg" class="ui image">
+                <img src="<?php echo get_theme_mod('little_header');?>" class="ui image">
                 <div class="info">
-                  <p>Rihanna <span>Digital</span></p>
+                  <p>
+                    <?php echo get_theme_mod('project-first-thumbnail-headline');?>
+                  <span>
+                    <?php echo get_theme_mod('project-first-thumbnail-type');?>
+                  </span>
+                  </p>
                 </div>
-                <a href="project"></a>
+                <a href="<?php echo get_permalink(get_theme_mod('project-first-thumbnail-link')); ?>"></a>
               </div>
               <div class="work-column">
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/hero.jpg" class="ui image">
