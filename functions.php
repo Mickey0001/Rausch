@@ -452,6 +452,159 @@ function themename_third_project_thumbnails_setup($wp_customize)
 
 }
 
+function themename_fourth_project_thumbnails_setup($wp_customize)
+
+{
+    $wp_customize->add_section('project-fourth-thumbnail-section', array(
+        'title' => 'Fourth Project Thumbnail',
+    ));
+
+    $wp_customize->add_setting('project-fourth-thumbnail-headline', array(
+        'default' => 'Project',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-fourth-thumbnail-headline-control', array(
+        'label' => 'Fourth Project Thumbnail Headline',
+        'section' => 'project-fourth-thumbnail-section',
+        'settings' => 'project-fourth-thumbnail-headline',
+    )));
+
+    $wp_customize->add_setting('project-fourth-thumbnail-type', array(
+        'default' => 'Digital',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-fourth-thumbnail-type-control', array(
+        'label' => 'Fourth Project Thumbnail Type',
+        'section' => 'project-fourth-thumbnail-section',
+        'settings' => 'project-fourth-thumbnail-type',
+    )));
+
+    $wp_customize->add_setting('project-fourth-thumbnail-link');
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-fourth-thumbnail-link-control', array(
+        'label' => 'Fourth Project Thumbnail Link',
+        'section' => 'project-fourth-thumbnail-section',
+        'settings' => 'project-fourth-thumbnail-link',
+        'type' => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('project-fourth-thumbnail-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project-fourth-thumbnail-image',
+            array(
+                'label'      => __( 'Fourth Project Image', 'theme_name' ),
+                'section'    => 'project-fourth-thumbnail-section',
+                'settings'   => 'project-fourth-thumbnail-image'
+            )
+        )
+    );
+
+}
+
+function themename_fifth_project_thumbnails_setup($wp_customize)
+
+{
+    $wp_customize->add_section('project-fifth-thumbnail-section', array(
+        'title' => 'Fifth Project Thumbnail',
+    ));
+
+    $wp_customize->add_setting('project-fifth-thumbnail-headline', array(
+        'default' => 'Project',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-fifth-thumbnail-headline-control', array(
+        'label' => 'Fifth Project Thumbnail Headline',
+        'section' => 'project-fifth-thumbnail-section',
+        'settings' => 'project-fifth-thumbnail-headline',
+    )));
+
+    $wp_customize->add_setting('project-fifth-thumbnail-type', array(
+        'default' => 'Digital',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-fifth-thumbnail-type-control', array(
+        'label' => 'Fifth Project Thumbnail Type',
+        'section' => 'project-fifth-thumbnail-section',
+        'settings' => 'project-fifth-thumbnail-type',
+    )));
+
+    $wp_customize->add_setting('project-fifth-thumbnail-link');
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-fifth-thumbnail-link-control', array(
+        'label' => 'Fifth Project Thumbnail Link',
+        'section' => 'project-fifth-thumbnail-section',
+        'settings' => 'project-fifth-thumbnail-link',
+        'type' => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('project-fifth-thumbnail-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project-fifth-thumbnail-image',
+            array(
+                'label'      => __( 'Fifth Project Image', 'theme_name' ),
+                'section'    => 'project-fifth-thumbnail-section',
+                'settings'   => 'project-fifth-thumbnail-image'
+            )
+        )
+    );
+
+}
+
+function themename_sixth_project_thumbnails_setup($wp_customize)
+
+{
+    $wp_customize->add_section('project-sixth-thumbnail-section', array(
+        'title' => 'Sixth Project Thumbnail',
+    ));
+
+    $wp_customize->add_setting('project-sixth-thumbnail-headline', array(
+        'default' => 'Project',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-sixth-thumbnail-headline-control', array(
+        'label' => 'Sixth Project Thumbnail Headline',
+        'section' => 'project-sixth-thumbnail-section',
+        'settings' => 'project-sixth-thumbnail-headline',
+    )));
+
+    $wp_customize->add_setting('project-sixth-thumbnail-type', array(
+        'default' => 'Digital',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-sixth-thumbnail-type-control', array(
+        'label' => 'Sixth Project Thumbnail Type',
+        'section' => 'project-sixth-thumbnail-section',
+        'settings' => 'project-sixth-thumbnail-type',
+    )));
+
+    $wp_customize->add_setting('project-sixth-thumbnail-link');
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'project-sixth-thumbnail-link-control', array(
+        'label' => 'Sixth Project Thumbnail Link',
+        'section' => 'project-sixth-thumbnail-section',
+        'settings' => 'project-sixth-thumbnail-link',
+        'type' => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('project-sixth-thumbnail-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project-sixth-thumbnail-image',
+            array(
+                'label'      => __( 'Sixth Project Image', 'theme_name' ),
+                'section'    => 'project-sixth-thumbnail-section',
+                'settings'   => 'project-sixth-thumbnail-image'
+            )
+        )
+    );
+
+}
+
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
 
 add_action('customize_register', 'themename_first_client_thumbnails_setup');
@@ -466,4 +619,7 @@ add_action('customize_register', 'themename_eighth_client_thumbnails_setup');
 add_action('customize_register', 'themename_first_project_thumbnails_setup');
 add_action('customize_register', 'themename_second_project_thumbnails_setup');
 add_action('customize_register', 'themename_third_project_thumbnails_setup');
+add_action('customize_register', 'themename_fourth_project_thumbnails_setup');
+add_action('customize_register', 'themename_fifth_project_thumbnails_setup');
+add_action('customize_register', 'themename_sixth_project_thumbnails_setup');
 

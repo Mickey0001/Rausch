@@ -51,7 +51,7 @@ include('includes/header.php');
                 <img src="<?php echo get_theme_mod('project-third-thumbnail-image');?>" class="ui image">
                 <div class="info">
                   <p>
-                     <?php echo get_theme_mod('project-second-thumbnail-headline');?>
+                     <?php echo get_theme_mod('project-third-thumbnail-headline');?>
                   <span>
                   <?php echo get_theme_mod('project-third-thumbnail-type');?>
                   </span>
