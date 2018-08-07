@@ -602,6 +602,38 @@ function themename_sixth_project_thumbnails_setup($wp_customize)
             )
         )
     );
+}
+//Projects Customizer End
+
+//About Slider Customizer Start
+function themename_first_about_slider_setup($wp_customize)
+
+{
+    $wp_customize->add_section('about-first-slider-section', array(
+        'title' => 'About - First Slide',
+    ));
+
+    $wp_customize->add_setting('about-first-slider-headline', array(
+        'default' => 'Test',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-first-slider-headline-control', array(
+        'label' => 'First Slider Headline',
+        'section' => 'about-first-slider-section',
+        'settings' => 'about-first-slider-headline',
+    )));
+
+    $wp_customize->add_setting('about-first-slider-textarea', array(
+        'default' => 'Paragraph Text Goes Here',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-first-slider-textarea', array(
+        'label' => 'First Slider Headline',
+        'type' => 'textarea',
+        'section' => 'about-first-slider-section',
+        'settings' => 'about-first-slider-textarea',
+    )));
+
 
 }
 
@@ -622,4 +654,6 @@ add_action('customize_register', 'themename_third_project_thumbnails_setup');
 add_action('customize_register', 'themename_fourth_project_thumbnails_setup');
 add_action('customize_register', 'themename_fifth_project_thumbnails_setup');
 add_action('customize_register', 'themename_sixth_project_thumbnails_setup');
+
+add_action('customize_register', 'themename_first_about_slider_setup');
 

@@ -16,34 +16,54 @@ include('includes/header.php');
             <div class="about">
                 <div class="ui text container">
                   <div class="home-text-slider">
-                    <div class="home-text">
-                      <h3>Our Ethos</h3>
-                      <div class="ui horizontal divider"></div>
-                      <p>My clients porfolio spans a range of industries including interior design, property, jewellery and the arts. I combina a clear design aestheti with solid commercial rationale to create projects that truly inspire, inform and engage.</p>
 
-                      <p>This site gives you a bit of background about me and examples of <a href="work">my work</a>. If you have something in mind or are looking for something in particular, <a href="contact">get in touch</a> - that's what I am here for.</p>
-                    </div> <!-- home-text -->
                    <div class="home-text">
-                      <h3>Relationships</h3>
+                      <h3><?php echo get_theme_mod('about-first-slider-headline');?></h3>
                       <div class="ui horizontal divider"></div>
-                      <p>My clients porfolio spans a range of industries including interior design, property, jewellery and the arts. I combina a clear design aestheti with solid commercial rationale to create projects that truly inspire, inform and engage.</p>
-
-                      <p>This site gives you a bit of background about me and examples of <a href="work">my work</a>. If you have something in mind or are looking for something in particular, <a href="contact">get in touch</a> - that's what I am here for.</p>
+                        <p>
+                          <?php echo get_theme_mod('about-first-slider-paragraph-one-textarea');?>
+                        </p>
+                        <p>
+                            <?php echo get_theme_mod('about-first-slider-paragraph-two-textarea');?>
+                        </p>
                     </div> <!-- home-text -->
-                    <div class="home-text">
-                      <h3>Experience</h3>
-                      <div class="ui horizontal divider"></div>
-                      <p>My clients porfolio spans a range of industries including interior design, property, jewellery and the arts. I combina a clear design aestheti with solid commercial rationale to create projects that truly inspire, inform and engage.</p>
 
-                      <p>This site gives you a bit of background about me and examples of <a href="work">my work</a>. If you have something in mind or are looking for something in particular, <a href="contact">get in touch</a> - that's what I am here for.</p>
-                    </div> <!-- home-text -->
                    <div class="home-text">
-                      <h3>Transparency</h3>
+                      <h3><?php echo get_theme_mod('about-second-slider-headline');?></h3>
                       <div class="ui horizontal divider"></div>
-                      <p>My clients porfolio spans a range of industries including interior design, property, jewellery and the arts. I combina a clear design aestheti with solid commercial rationale to create projects that truly inspire, inform and engage.</p>
-
-                      <p>This site gives you a bit of background about me and examples of <a href="work">my work</a>. If you have something in mind or are looking for something in particular, <a href="contact">get in touch</a> - that's what I am here for.</p>
+                        <p>
+                          <?php echo get_theme_mod('about-second-slider-paragraph-one-textarea');?>
+                        </p>
+                        <p>
+                            <?php echo get_theme_mod('about-second-slider-paragraph-two-textarea');?>
+                        </p>
                     </div> <!-- home-text -->
+
+
+                    <div class="home-text">
+                      <h3><?php echo get_theme_mod('about-third-slider-headline');?></h3>
+                      <div class="ui horizontal divider"></div>
+                        <p>
+                          <?php echo get_theme_mod('about-third-slider-paragraph-one-textarea');?>
+                        </p>
+                        <p>
+                            <?php echo get_theme_mod('about-third-slider-paragraph-two-textarea');?>
+                        </p>
+                    </div> <!-- home-text -->
+
+
+                   <div class="home-text">
+                      <h3><?php echo get_theme_mod('about-fourth-slider-headline');?></h3>
+                      <div class="ui horizontal divider"></div>
+                        <p>
+                          <?php echo get_theme_mod('about-fourth-slider-paragraph-one-textarea');?>
+                        </p>
+                        <p>
+                            <?php echo get_theme_mod('about-fourth-slider-paragraph-two-textarea');?>
+                        </p>
+                    </div> <!-- home-text -->
+
+
                   </div> <!-- home-text-slider -->
                 </div> <!-- home-text-slider -->
               <div class="arrows">
