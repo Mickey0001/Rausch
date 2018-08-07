@@ -1,32 +1,44 @@
-<?php include('includes/header.php'); ?>
+<?php
 
-    	<div class="main-content index-main">
-          <div class="ui container">
-            
-            <div class="ui two column stackable grid">
-              
-                <div class="column">
-                          <?php 
+/*
 
-                          if (have_posts()) :
-                            while (have_posts()) : the_post(); ?>
+Template Name: Client Template
 
-                            <h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-                            <?php the_content();?>
+*/
+include('includes/header.php');
+?>
 
-                          <?php endwhile;
+ <div class="pusher">
+    <div class="wrapper">
+				
+        <div class="main-content">
+          <div class="ui text container">
+            <div class="home-text client-text">
 
-                          else :
-                            echo '<p></p>';
+													<?php if(have_posts()) : ?>
+											<?php while(have_posts()) : the_post(); ?>
+                      <h3>
+													<?php the_title(); ?>
+                      </h3>
+                      <div class="ui horizontal divider"></div>
 
-                          endif;
-                            
-                          ?>
-              </div> <!-- column -->
-              
-              </div> <!-- column -->
-            </div> <!-- grid -->
+											<?php the_content(); ?>
+										</div><!-- /.blog-post -->
+										<?php endwhile; ?>
+									<?php else : ?>
+										<p><?php __('No Page Found'); ?></p>
+									<?php endif; ?>
+									
+                  </div> <!-- home-text -->
           </div> <!-- container -->
-    	</div> <!-- main-content -->
-    	
-      <?php include('includes/footer.php'); ?>
+
+    	</div> <!-- main content -->
+
+
+
+      </div> <!-- wrapper -->
+    </div> <!-- pusher -->
+  </div>
+
+
+<?php include('includes/footer.php'); ?>
