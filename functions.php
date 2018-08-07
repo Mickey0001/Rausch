@@ -335,16 +335,18 @@ function themename_first_project_thumbnails_setup($wp_customize)
         'type' => 'dropdown-pages'
     )));
 
-    
-    $wp_customize->add_setting('little_header');
-
-    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'little_header', array(
-        'section' => 'project-first-thumbnail-section',
-        'label' => 'Little Header',
-        'settings' => 'little_header',
-        'width' => 355,
-        'height' => 200
-    )));
+    $wp_customize->add_setting('project-first-thumbnail-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project-first-thumbnail-image',
+            array(
+                'label'      => __( 'Project Image', 'theme_name' ),
+                'section'    => 'project-first-thumbnail-section',
+                'settings'   => 'project-first-thumbnail-image'
+            )
+        )
+    );
 
 }
 

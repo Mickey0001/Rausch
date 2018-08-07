@@ -21,7 +21,7 @@ include('includes/header.php');
          <div class="works">
             <div class="ui fluid container">
               <div class="work-column">
-                <img src="<?php echo get_theme_mod('little_header');?>" class="ui image">
+                <img src=" <?php echo get_theme_mod('project-first-thumbnail-image');?>" class="ui image">
                 <div class="info">
                   <p>
                     <?php echo get_theme_mod('project-first-thumbnail-headline');?>
