@@ -1,7 +1,7 @@
 <footer>
     	  <div class="ui container">
     	    <div class="footer-content">
-              <div class="copyright">&copy;<?php echo date("Y"); ?> <a href=""> Gamaliel Rausch</a>All rights reserved</div>
+              <div class="copyright">&copy;<?php echo date("Y"); ?> <a href="home"> Gamaliel Rausch</a>All rights reserved</div>
               <div class="right-content">
                 <div class="ui horizontal list">
                 <?php $args = array('theme_location' => 'footer'); ?>
@@ -15,7 +15,6 @@
     	    </div> <!-- footer content -->
     	  </div> <!-- ui container -->
     	</footer>
-    	
       </div> <!-- wrapper -->
     </div> <!-- pusher -->
   </div>
