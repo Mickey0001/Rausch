@@ -66,27 +66,32 @@ include('includes/header.php');
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">Evergreen</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-fourth-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-fourth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">St. Georg</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-fifth-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-fifth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">PlanPooch</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-sixth-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-sixth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">Paw Pack</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-sixth-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-seventh-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
                <div class="column">
                   <div class="c-card">
-                    <a href="project">Evergreen</a>
+                  <a href="<?php echo get_permalink(get_theme_mod('client-sixth-thumbnail-link')); ?>">
+                     <?php echo get_theme_mod('client-eighth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
               </div> <!-- grid -->
