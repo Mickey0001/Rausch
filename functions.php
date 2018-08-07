@@ -728,6 +728,47 @@ function themename_third_about_slider_setup($wp_customize)
     )));
 }
 
+function themename_fourth_about_slider_setup($wp_customize)
+
+{
+    $wp_customize->add_section('about-fourth-slider-section', array(
+        'title' => 'About - Fourth Slide',
+    ));
+
+    $wp_customize->add_setting('about-fourth-slider-headline', array(
+        'default' => 'Test',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-fourth-slider-headline-control', array(
+        'label' => 'Slider Headline',
+        'section' => 'about-fourth-slider-section',
+        'settings' => 'about-fourth-slider-headline',
+    )));
+
+    $wp_customize->add_setting('about-fourth-slider-paragraph-one-textarea', array(
+        'default' => 'First Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-fourth-slider-paragraph-one-textarea', array(
+        'label' => 'Second Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-fourth-slider-section',
+        'settings' => 'about-fourth-slider-paragraph-one-textarea',
+    )));
+
+    $wp_customize->add_setting('about-fourth-slider-paragraph-two-textarea', array(
+        'default' => 'Second Paragraph',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'about-fourth-slider-paragraph-two-textarea', array(
+        'label' => 'fourth Paragraph',
+        'type' => 'textarea',
+        'section' => 'about-fourth-slider-section',
+        'settings' => 'about-fourth-slider-paragraph-two-textarea',
+    )));
+}
+//Slider Customizer End
+
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
 
 add_action('customize_register', 'themename_first_client_thumbnails_setup');
@@ -749,4 +790,5 @@ add_action('customize_register', 'themename_sixth_project_thumbnails_setup');
 add_action('customize_register', 'themename_first_about_slider_setup');
 add_action('customize_register', 'themename_second_about_slider_setup');
 add_action('customize_register', 'themename_third_about_slider_setup');
+add_action('customize_register', 'themename_fourth_about_slider_setup');
 
