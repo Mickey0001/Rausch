@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: Client Template
+Template Name: Clients Template
 
 */
 include('includes/header.php');
