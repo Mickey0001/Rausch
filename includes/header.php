@@ -41,15 +41,3 @@
               </div>
     		</div> <!-- site branding -->
     	</header> <!-- header -->
-
-
-<!-- maybeeee
-
-      	'menu_id'         => "navigation", 
-							'echo'            => false,
-							'container'       => '', 
-							'container_class' => '',
-							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'container_id'    => 'navigation_bar', 
-							'theme_location'  => 'rt-theme-main-navigation',
-							'walker' => new RT_Menu_Class_Walker -->
