@@ -29,9 +29,10 @@ include('includes/header.php');
                       <h3>
 													<?php the_title(); ?>
                       </h3>
-                      <div class="ui horizontal divider"></div>
+       
 
 											<?php the_content(); ?>
+                      <div class="ui horizontal divider"></div>
 										</div><!-- /.blog-post -->
 										<?php endwhile; ?>
 									<?php else : ?>
@@ -94,7 +95,7 @@ include('includes/header.php');
                      <?php echo get_theme_mod('client-eighth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
-              </div> <!-- grid -->
+                </div> <!-- grid -->
             </div> <!-- ui container -->
           </div> <!-- clients-container -->
     	</div> <!-- main content -->
