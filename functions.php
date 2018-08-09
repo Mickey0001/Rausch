@@ -32,7 +32,8 @@
     }
 }
 
-    function themename_custom_header_setup()
+//Homepage hero image header start
+function themename_custom_header_setup()
     {
     $defaults = array
     (
@@ -80,7 +81,43 @@
 }
 
 add_action( 'after_setup_theme', 'themename_custom_header_setup' );
+//Homepage hero image header end
 
+function themename_hero_client_headings_setup($wp_customize)
+
+{
+    $wp_customize->add_section('client-hero-heading-section', array(
+        'title' => 'Client Hero Image',
+    ));
+
+    $wp_customize->add_setting('client-hero-heading-headline', array(
+        'default' => 'Client',
+    ));
+
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-hero-heading-headline-control', array(
+        'label' => 'Client Hero Image',
+        'section' => 'client-hero-heading-section',
+        'settings' => 'client-hero-heading-headline',
+    )));
+
+
+
+
+    $wp_customize->add_setting('client-hero-heading-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'client-hero-heading-image',
+            array(
+                'label'      => __( 'Hero Client Image', 'theme_name' ),
+                'section'    => 'client-hero-heading-section',
+                'settings'   => 'client-hero-heading-image'
+            )
+        )
+    );
+}
+
+add_action('customize_register', 'themename_hero_client_headings_setup');
 
 //Custom Client Thumbnails
 function themename_first_client_thumbnails_setup($wp_customize)
@@ -769,6 +806,11 @@ function themename_fourth_about_slider_setup($wp_customize)
 }
 //Slider Customizer End
 
+
+//Client page hero image header start
+
+//Client page hero image header end
+
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
 
 add_action('customize_register', 'themename_first_client_thumbnails_setup');
@@ -791,4 +833,5 @@ add_action('customize_register', 'themename_first_about_slider_setup');
 add_action('customize_register', 'themename_second_about_slider_setup');
 add_action('customize_register', 'themename_third_about_slider_setup');
 add_action('customize_register', 'themename_fourth_about_slider_setup');
+
 
