@@ -11,16 +11,17 @@ include('includes/header.php');
  <div class="pusher">
     <div class="wrapper">
 
-<?php if ( get_header_image() ) : ?>
-    <div id="hero">
-            <img class="ui image" src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"/>
-				<div class="hero-overlay">
-					<p><?php bloginfo('name'); ?><span><?php bloginfo('description'); ?></span></p>
+    <div class="hero">
+      <img src="<?php echo get_theme_mod('home-hero-heading-image');?>" alt="hero" class="ui image">
+        <div class="hero-overlay">
+        <p>
+             <?php bloginfo('name'); ?>
+           <span>
+              <?php bloginfo('description'); ?>
+           </span>
+        </p>
         </div> <!-- hero overlay -->
     </div> <!-- hero -->
-<?php endif; ?>
-
-
 	
 	
 				<div class="main-content index-main">

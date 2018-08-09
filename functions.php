@@ -32,57 +32,43 @@
     }
 }
 
-//Homepage hero image header start
-function themename_custom_header_setup()
-    {
-    $defaults = array
-    (
-        // Default Header Image to display
-        'default-image'         => get_template_directory_uri() . '/images/headers/default.jpg',
-        // Display the header text along with the image
-        'header-text'           => false,
-        // Header text color default
-        'default-text-color'        => '000',
-        // Header image width (in pixels)
-        'width'             => 2000,
-        // Header image height (in pixels)
-        'height'            => 1105,
-        // Header image random rotation default
-        'random-default'        => false,
-        // Enable upload of image file in admin
-        'uploads'       => false,
-        // function to be called in theme head section
-        'wp-head-callback'      => 'wphead_cb',
-        //  function to be called in preview page head section
-        'admin-head-callback'       => 'adminhead_cb',
-        // function to produce preview markup in the admin screen
-        'admin-preview-callback'    => 'adminpreview_cb',
-        );
+//Home page hero image header start
+function themename_hero_home_headings_setup($wp_customize)
 
-        $header_info = array
-        (
-            'width'         => 2000,
-            'height'        => 1105,
-            'default-image' => get_template_directory_uri() . '/assets/images/hero.jpg',
-        );
+{
+    $wp_customize->add_section('home-hero-heading-section', array(
+        'title' => 'Home Hero Image',
+    ));
 
-        add_theme_support( 'custom-header', $header_info );
+    $wp_customize->add_setting('home-hero-heading-headline', array(
+        'default' => 'home',
+    ));
 
-        $header_images = array
-        (
-            'hero' => array(
-                    'url'           => get_template_directory_uri() . '/assets/images/hero.jpg',
-                    'thumbnail_url' => get_template_directory_uri() . '/assets/images/hero.jpg',
-                    'description'   => 'Hero',
-            ),
-        );
+    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'home-hero-heading-headline-control', array(
+        'label' => 'home Hero Image',
+        'section' => 'home-hero-heading-section',
+        'settings' => 'home-hero-heading-headline',
+    )));
 
-        register_default_headers( $header_images );
+    $wp_customize->add_setting('home-hero-heading-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'home-hero-heading-image',
+            array(
+                'label'      => __( 'Hero home Image', 'theme_name' ),
+                'section'    => 'home-hero-heading-section',
+                'settings'   => 'home-hero-heading-image'
+            )
+        )
+    );
 }
 
-add_action( 'after_setup_theme', 'themename_custom_header_setup' );
-//Homepage hero image header end
+add_action('customize_register', 'themename_hero_home_headings_setup');
+//Home page hero image header end
 
+
+//Client page hero image header start
 function themename_hero_client_headings_setup($wp_customize)
 
 {
@@ -100,9 +86,6 @@ function themename_hero_client_headings_setup($wp_customize)
         'settings' => 'client-hero-heading-headline',
     )));
 
-
-
-
     $wp_customize->add_setting('client-hero-heading-image');
     $wp_customize->add_control(
         new WP_Customize_Image_Control(
@@ -118,6 +101,7 @@ function themename_hero_client_headings_setup($wp_customize)
 }
 
 add_action('customize_register', 'themename_hero_client_headings_setup');
+//Client page hero image header end
 
 //Custom Client Thumbnails
 function themename_first_client_thumbnails_setup($wp_customize)
@@ -806,10 +790,6 @@ function themename_fourth_about_slider_setup($wp_customize)
 }
 //Slider Customizer End
 
-
-//Client page hero image header start
-
-//Client page hero image header end
 
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
 
