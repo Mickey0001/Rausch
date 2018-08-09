@@ -4,8 +4,6 @@
               <div class="copyright">&copy;<?php echo date("Y"); ?> <a href="home"> Gamaliel Rausch</a>All rights reserved</div>
               <div class="right-content">
                 <div class="ui horizontal list">
-                <?php $args = array('theme_location' => 'footer'); ?>
-                  <?php wp_nav_menu($args);?>
                   <a href="work" class="item">My Work</a>
                   <a href="client" class="item">Clients</a>
                   <a href="tel:015901076051" class="item">01591076041</a>
