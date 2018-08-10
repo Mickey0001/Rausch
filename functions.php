@@ -103,222 +103,6 @@ function themename_hero_client_headings_setup($wp_customize)
 add_action('customize_register', 'themename_hero_client_headings_setup');
 //Client page hero image header end
 
-//Custom Client Thumbnails
-function themename_first_client_thumbnails_setup($wp_customize)
-
-        {
-            $wp_customize->add_section('client-first-thumbnail-section', array(
-                'title' => 'First Client Thumbnail',
-            ));
-
-            $wp_customize->add_setting('client-first-thumbnail-headline', array(
-                'default' => 'Client',
-            ));
-
-            $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-first-thumbnail-headline-control', array(
-                'label' => 'First Thumbnail Headline',
-                'section' => 'client-first-thumbnail-section',
-                'settings' => 'client-first-thumbnail-headline',
-            )));
-
-            $wp_customize->add_setting('client-first-thumbnail-link');
-
-            $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-first-thumbnail-link-control', array(
-                'label' => 'First Thumbnail Link',
-                'section' => 'client-first-thumbnail-section',
-                'settings' => 'client-first-thumbnail-link',
-                'type' => 'dropdown-pages'
-            )));
-        }
-
-function themename_second_client_thumbnails_setup($wp_customize)
-
-    {
-        $wp_customize->add_section('client-second-thumbnail-section', array(
-            'title' => 'Second Client Thumbnail',
-        ));
-
-        $wp_customize->add_setting('client-second-thumbnail-headline', array(
-            'default' => 'Client',
-        ));
-
-        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-second-thumbnail-headline-control', array(
-            'label' => 'Second Thumbnail Headline',
-            'section' => 'client-second-thumbnail-section',
-            'settings' => 'client-second-thumbnail-headline',
-        )));
-
-        $wp_customize->add_setting('client-second-thumbnail-link');
-
-        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-second-thumbnail-link-control', array(
-            'label' => 'Second Thumbnail Link',
-            'section' => 'client-second-thumbnail-section',
-            'settings' => 'client-second-thumbnail-link',
-            'type' => 'dropdown-pages'
-        )));
-    }
-
-    function themename_third_client_thumbnails_setup($wp_customize)
-
-    {
-        $wp_customize->add_section('client-third-thumbnail-section', array(
-            'title' => 'Third Client Thumbnail',
-        ));
-    
-        $wp_customize->add_setting('client-third-thumbnail-headline', array(
-            'default' => 'Client',
-        ));
-    
-        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-third-thumbnail-headline-control', array(
-            'label' => 'third Thumbnail Headline',
-            'section' => 'client-third-thumbnail-section',
-            'settings' => 'client-third-thumbnail-headline',
-        )));
-    
-        $wp_customize->add_setting('client-third-thumbnail-link');
-    
-        $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-third-thumbnail-link-control', array(
-            'label' => 'Third Thumbnail Link',
-            'section' => 'client-third-thumbnail-section',
-            'settings' => 'client-third-thumbnail-link',
-            'type' => 'dropdown-pages'
-        )));
-    }
-
-    function themename_fourth_client_thumbnails_setup($wp_customize)
-
-{
-    $wp_customize->add_section('client-fourth-thumbnail-section', array(
-        'title' => 'Fourth Client Thumbnail',
-    ));
-
-    $wp_customize->add_setting('client-fourth-thumbnail-headline', array(
-        'default' => 'Client',
-    ));
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-fourth-thumbnail-headline-control', array(
-        'label' => 'Fourth Thumbnail Headline',
-        'section' => 'client-fourth-thumbnail-section',
-        'settings' => 'client-fourth-thumbnail-headline',
-    )));
-
-    $wp_customize->add_setting('client-fourth-thumbnail-link');
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-fourth-thumbnail-link-control', array(
-        'label' => 'Fourth Thumbnail Link',
-        'section' => 'client-fourth-thumbnail-section',
-        'settings' => 'client-fourth-thumbnail-link',
-        'type' => 'dropdown-pages'
-    )));
-}
-
-function themename_fifth_client_thumbnails_setup($wp_customize)
-
-{
-    $wp_customize->add_section('client-fifth-thumbnail-section', array(
-        'title' => 'Fifth Client Thumbnail',
-    ));
-
-    $wp_customize->add_setting('client-fifth-thumbnail-headline', array(
-        'default' => 'Client',
-    ));
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-fifth-thumbnail-headline-control', array(
-        'label' => 'Fifth Thumbnail Headline',
-        'section' => 'client-fifth-thumbnail-section',
-        'settings' => 'client-fifth-thumbnail-headline',
-    )));
-
-    $wp_customize->add_setting('client-fifth-thumbnail-link');
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-fifth-thumbnail-link-control', array(
-        'label' => 'Fifth Thumbnail Link',
-        'section' => 'client-fifth-thumbnail-section',
-        'settings' => 'client-fifth-thumbnail-link',
-        'type' => 'dropdown-pages'
-    )));
-}
-
-function themename_sixth_client_thumbnails_setup($wp_customize)
-
-{
-    $wp_customize->add_section('client-sixth-thumbnail-section', array(
-        'title' => 'Sixth Client Thumbnail',
-    ));
-
-    $wp_customize->add_setting('client-sixth-thumbnail-headline', array(
-        'default' => 'Client',
-    ));
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-sixth-thumbnail-headline-control', array(
-        'label' => 'Sixth Thumbnail Headline',
-        'section' => 'client-sixth-thumbnail-section',
-        'settings' => 'client-sixth-thumbnail-headline',
-    )));
-
-    $wp_customize->add_setting('client-sixth-thumbnail-link');
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-sixth-thumbnail-link-control', array(
-        'label' => 'Sixth Thumbnail Link',
-        'section' => 'client-sixth-thumbnail-section',
-        'settings' => 'client-sixth-thumbnail-link',
-        'type' => 'dropdown-pages'
-    )));
-}
-function themename_seventh_client_thumbnails_setup($wp_customize)
-
-{
-    $wp_customize->add_section('client-seventh-thumbnail-section', array(
-        'title' => 'Seventh Client Thumbnail',
-    ));
-
-    $wp_customize->add_setting('client-seventh-thumbnail-headline', array(
-        'default' => 'Client',
-    ));
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-seventh-thumbnail-headline-control', array(
-        'label' => 'Seventh Thumbnail Headline',
-        'section' => 'client-seventh-thumbnail-section',
-        'settings' => 'client-seventh-thumbnail-headline',
-    )));
-
-    $wp_customize->add_setting('client-seventh-thumbnail-link');
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-seventh-thumbnail-link-control', array(
-        'label' => 'Seventh Thumbnail Link',
-        'section' => 'client-seventh-thumbnail-section',
-        'settings' => 'client-seventh-thumbnail-link',
-        'type' => 'dropdown-pages'
-    )));
-}
-
-function themename_eighth_client_thumbnails_setup($wp_customize)
-
-{
-    $wp_customize->add_section('client-eighth-thumbnail-section', array(
-        'title' => 'Eighth Client Thumbnail',
-    ));
-
-    $wp_customize->add_setting('client-eighth-thumbnail-headline', array(
-        'default' => 'Client',
-    ));
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-eighth-thumbnail-headline-control', array(
-        'label' => 'Eighth Thumbnail Headline',
-        'section' => 'client-eighth-thumbnail-section',
-        'settings' => 'client-eighth-thumbnail-headline',
-    )));
-
-    $wp_customize->add_setting('client-eighth-thumbnail-link');
-
-    $wp_customize->add_control( new Wp_Customize_Control($wp_customize, 'client-eighth-thumbnail-link-control', array(
-        'label' => 'Eighth Thumbnail Link',
-        'section' => 'client-eighth-thumbnail-section',
-        'settings' => 'client-eighth-thumbnail-link',
-        'type' => 'dropdown-pages'
-    )));
-}
-
 //Custom Project Thumbnails
 function themename_first_project_thumbnails_setup($wp_customize)
 
@@ -790,6 +574,26 @@ function themename_fourth_about_slider_setup($wp_customize)
 }
 //Slider Customizer End
 
+
+//Widgets Locations Start
+
+function ourWidgetsInit() 
+
+{
+
+    register_sidebar( array(
+        'name' => 'Clients Widgets Area',
+        'id'   => 'clients_bar',
+        'before_widget' => ' <div class="c-card">,<div class="c-card">',
+        'after_widget' => '</div>,</div>',
+        'before_title' => '<a>',
+        'after_title' => '</a>'
+    ));
+
+}
+
+
+add_action('widgets_init', 'ourWidgetsInit');
 
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
 
