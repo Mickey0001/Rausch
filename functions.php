@@ -286,6 +286,24 @@ function workWidgetsInit()
 add_action('widgets_init', 'workWidgetsInit');
 //Work Widget End
 
+
+//Project Widget Start
+function projectWidgetsInit() 
+
+{
+
+    register_sidebar( array(
+        'name' => 'Project Widgets Area',
+        'id'   => 'project_bar',
+        'before_widget' => '<div class="sections"> <div class="devices">',
+        'after_widget' => '</div></div>'
+    ));
+
+}
+
+add_action('widgets_init', 'projectWidgetsInit');
+//Project Widget End
+
 add_action( 'wp_enqueue_scripts', 'add_script_style', 10 );    
 
 add_action('customize_register', 'themename_first_about_slider_setup');

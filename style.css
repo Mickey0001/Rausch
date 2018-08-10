@@ -363,7 +363,7 @@ h3 {
 .devices {
   padding: 50px 0;
   border-top: 1px solid #ffffff24;
-  border-bottom: 1px solid #ffffff24;
+  border-bottom: none !important;
 }
 .apple-device {
   width: 90%;
