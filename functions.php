@@ -258,8 +258,8 @@ function clientWidgetsInit()
     register_sidebar( array(
         'name' => 'Clients Widgets Area',
         'id'   => 'clients_bar',
-        'before_widget' => '<div class="column"><div class="c-card widget-area"><a>',
-        'after_widget' => '</a></div></div>'
+        'before_widget' => '<div class="column"><div class="c-card widget-area">',
+        'after_widget' => '</div></div>'
     ));
 
 }
