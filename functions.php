@@ -258,7 +258,7 @@ function clientWidgetsInit()
     register_sidebar( array(
         'name' => 'Clients Widgets Area',
         'id'   => 'clients_bar',
-        'before_widget' => '<div class="column"><div class="c-card widget-area">',
+        'before_widget' => '<div class="column"><div class="c-card">',
         'after_widget' => '</div></div>'
     ));
 
@@ -275,10 +275,8 @@ function workWidgetsInit()
     register_sidebar( array(
         'name' => 'Work Widgets Area',
         'id'   => 'work_bar',
-        'before_widget' => '<div class="work-column"><img class="ui image">',
-        'after_widget' => '</div>',
-        'before_title' => ' <div class="info"><p>',
-        'after_title'  => '</p></div>'
+        'before_widget' => '<div class="work-column">',
+        'after_widget' => '</div>'
     ));
 
 }
