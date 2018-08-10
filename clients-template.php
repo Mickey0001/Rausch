@@ -50,54 +50,63 @@ include('includes/header.php');
           <div class="clients-container">
             <div class="ui container">
               <div class="ui four column stackable grid">
+              
                 <div class="column">
                   <div class="c-card">
                     <a href="<?php echo get_permalink(get_theme_mod('client-first-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-first-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-second-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-second-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-third-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-third-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-fourth-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-fourth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-fifth-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-fifth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-sixth-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-sixth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-sixth-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-seventh-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                <div class="column">
                   <div class="c-card">
                   <a href="<?php echo get_permalink(get_theme_mod('client-sixth-thumbnail-link')); ?>">
                      <?php echo get_theme_mod('client-eighth-thumbnail-headline'); ?></a> 
                   </div> <!-- c-card -->
                 </div> <!-- column -->
+
                 </div> <!-- grid -->
             </div> <!-- ui container -->
           </div> <!-- clients-container -->
