@@ -51,8 +51,9 @@ include('includes/header.php');
             <div class="ui container">
               <div class="ui four column stackable grid">
 
-
-                      <?php get_sidebar('clients_bar'); ?>
+              
+                  <?php dynamic_sidebar('clients_bar'); ?>    
+    
 
                 </div> <!-- grid -->
             </div> <!-- ui container -->

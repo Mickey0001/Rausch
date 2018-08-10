@@ -584,10 +584,8 @@ function ourWidgetsInit()
     register_sidebar( array(
         'name' => 'Clients Widgets Area',
         'id'   => 'clients_bar',
-        'before_widget' => ' <div class="c-card">,<div class="c-card">',
-        'after_widget' => '</div>,</div>',
-        'before_title' => '<a>',
-        'after_title' => '</a>'
+        'before_widget' => '<div class="column"><div class="c-card widget-area"><a>',
+        'after_widget' => '</a></div></div>'
     ));
 
 }
@@ -617,5 +615,6 @@ add_action('customize_register', 'themename_first_about_slider_setup');
 add_action('customize_register', 'themename_second_about_slider_setup');
 add_action('customize_register', 'themename_third_about_slider_setup');
 add_action('customize_register', 'themename_fourth_about_slider_setup');
+
 
 
