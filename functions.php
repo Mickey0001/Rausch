@@ -32,6 +32,8 @@
     }
 }
 
+
+
 //Home page hero image header start
 function themename_hero_home_headings_setup($wp_customize)
 
@@ -312,4 +314,5 @@ add_action('customize_register', 'themename_fourth_about_slider_setup');
 
 //Image Widget
 require('work_image_widget.php');
+
 

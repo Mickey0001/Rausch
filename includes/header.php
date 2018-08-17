@@ -16,6 +16,7 @@
   <header>
            <div class="ui left sidebar large menu">
               <div class="vert-menu">
+              
                   <a href="home" class="item">Home</a>
                   <a href="about" class="item">About</a>
                   <a href="work" class="item">My Work</a>
