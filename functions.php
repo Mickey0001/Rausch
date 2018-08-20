@@ -313,6 +313,6 @@ add_action('customize_register', 'themename_fourth_about_slider_setup');
 
 
 //Image Widget
-require('work_image_widget.php');
+// require('work_image_widget.php');
 
 
